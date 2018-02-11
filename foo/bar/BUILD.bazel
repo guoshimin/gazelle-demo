@@ -1,0 +1,10 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = ["baz.go"],
+    cgo = True,
+    copts = ["-Ifoo/bar/foo/bar"],
+    importpath = "github.com/example/project/foo/bar",
+    visibility = ["//visibility:public"],
+)
